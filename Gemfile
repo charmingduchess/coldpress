@@ -5,12 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby "2.7.4"
-
+ruby "2.7.2"
 
 gem "autoprefixer-rails"
-
+gem "clearance"
 gem "bootsnap", require: false
+gem "high_voltage"
 gem "honeybadger"
 gem "pg"
 gem "puma"
@@ -36,8 +36,10 @@ group :development, :test do
 end
 
 group :test do
+  gem "factory_bot_rails"
   gem "formulaic"
   gem "launchy"
+  gem "rspec-rails"
   gem "timecop"
   gem "webmock"
 end
