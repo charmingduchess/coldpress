@@ -5,5 +5,8 @@
     <li>
       <%= article.title %>
     </li>
+    <div>
+      <%= @markdown.render(article.body).html_safe %>
+    </div>
   <% end %>
 </ul>

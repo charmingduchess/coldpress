@@ -38,4 +38,10 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Article do
+    edit do
+      field :body, :simple_mde
+    end
+  end
 end
